@@ -5,7 +5,7 @@ var animalController=require('.././animal/animalController.js');
 module.exports = function (app, express) {
 
 //=============================================================================
-/*								movie route									 */
+/*								cat route									 */
 //=============================================================================
 	app.get('/api/getAll',catController.getAllCats);
 	app.post('/api/addcat',catController.addCat);
@@ -13,7 +13,7 @@ module.exports = function (app, express) {
 	//here you have to add two more routes
 	
 //=============================================================================
-/*								book route									 */
+/*								animal route									 */
 //=============================================================================
 	//app.post('/api/book/insterbooks', bookController.insertBooks);
 	//here you have to add two more routes

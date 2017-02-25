@@ -21,7 +21,11 @@ module.exports ={
 		
 		for (var i = 0; i < req.body.length; i++) {
 			console.log(req.body[i]);
-			Animal.create(req.body[i]);
+			Animal.create(req.body[i],function(err,ok){
+			if(err){
+				res.json(err);
+			}
+		});
 		}
 		res.json("animal Added")
 		
