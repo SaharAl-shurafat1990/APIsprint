@@ -3,8 +3,42 @@
 <head>
 	<title>Home</title>
 </head>
-<body>
+<body ng-app="cats" ng-controller="catsController">
 <h1>SprintApi Sahar</h1>
+<h1>Add Cat</h1>
+<div>
+<form ng-submit="create()">
+<label>Cat Type</label>
+<input type="text" ng-model="cat.type">
+<hr>
+<label>CatName</label>
+<input type="text" ng-model="cat.name">
+<br>
+<br>
+<label>Cat Desc</label>
+<input type="text" ng-model="cat.des">
+<br>
+<br>
+<button type="submit">Add</button>
+</form>
+</div>
+
+
+<h1>show Cats</h1>
+<div >
+	there are  {{ cats.length }} cats
+<ul>
+<li ng-repeat="cat in cats">{{cat.cat_type}}</li>
+</ul>
+<form ng-submit="show()">
+<button type="submit">show</button>
 	
+</form>
+</div>
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-route/angular-route.js"></script>
+<script src="controller.js"></script>
+
 </body>
 </html>
